@@ -22,7 +22,7 @@ def num_digits(number):
 	returns the number of digits in it"""
 	incriment = 0
 	
-	for characters in number:
+	for characters in str(number):
 		incriment += 1
 	
 	return incriment
@@ -36,8 +36,8 @@ def sum_digits(digits):
 	
 	sum = 0
 	
-	for digit in number:
-		sum = sum + int(digit)
+	for digit in str(digits):
+		sum += int(digit)
 	
 	return sum
 
@@ -49,8 +49,8 @@ def sum_less_ints(number):
 	returns the sum of all of the integers that are less than the given number"""
 	
 	sum = 0
-	
-	for less_ints in number:
+		
+	while number > 0:
 		number -= 1
 		sum += number
 	
@@ -63,10 +63,64 @@ def factorial(number):
 	"""takes a non-negative integer as a parameter
 	returns its factorial"""
 	
-	product = 0
+	product = 1
 	
-	for less_ints in number:
-		number -= 1
+	while number > 0:
 		product *= number
+		number -= 1
 	
 	return product
+
+#-------------------------------Function 5-----------------------------------
+
+def is_factor(number1, number2):
+
+	"""Takes two positive integers as parameters
+	figures out whether the second number is a factor of the first."""
+	
+	if number1 % number2 == 0:
+		return True
+	
+	else:
+		return False
+
+#-------------------------------Function 6-----------------------------------
+
+def is_prime(number):
+	
+	"""Takes an integer greater than or equal to 2 as a parameter
+	Returns true if the number is prime, and false if the number is not."""
+	
+	divisor = 2
+	
+	while divisor < number:
+		if number % divisor == 0:
+			return False
+		divisor += 1
+
+	else:
+		return True
+		
+#-------------------------------Function 7-----------------------------------
+
+def is_perfect(number):
+	"""Takes a positive integer as a parameter.
+	Returns True if the number is perfect and False if it is not."""
+	
+	
+
+#-------------------------------Function 8-----------------------------------
+
+def sum_divisible(number):
+
+	"""Takes a positive integer as a parameter. 
+	Returns true if the sum of the digits of the number divide evenly into the number.
+	Returns false if the sum of the digits of the number do not divide evenly into the number."""
+	
+	if number % sum_digits(number) == 0:
+		return True
+	else:
+		return False
+	
+	
+	
