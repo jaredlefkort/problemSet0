@@ -31,6 +31,10 @@ print("11 is a prime number: {}".format(ps0.is_prime(11)))
 print("25 is a prime number: {}".format(ps0.is_prime(25)))
 print("31 is a prime number: {}".format(ps0.is_prime(31)))
 
+print("6 is a perfect number: {}".format(ps0.is_perfect(6)))
+print("28 is a perfect number: {}".format(ps0.is_perfect(28)))
+print("30 is a perfect number: {}".format(ps0.is_perfect(30)))
+
 print("6 divided by the number of digits has no remainder: {}".format(ps0.sum_divisible(6)))
-print("15 divided by the number of digits has no remainder: {}".format(ps0.sum_divisible(15)))
+print("16 divided by the number of digits has no remainder: {}".format(ps0.sum_divisible(16)))
 print("20 divided by the number of digits has no remainder: {}".format(ps0.sum_divisible(20)))

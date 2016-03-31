@@ -107,6 +107,18 @@ def is_perfect(number):
 	"""Takes a positive integer as a parameter.
 	Returns True if the number is perfect and False if it is not."""
 	
+	sum = 0
+	
+	for numbers in range(1, number):
+		if number % numbers == 0:
+			sum += numbers
+	
+	if sum == number:
+		return True
+	else:
+		return False
+			
+	
 	
 
 #-------------------------------Function 8-----------------------------------
@@ -121,6 +133,3 @@ def sum_divisible(number):
 		return True
 	else:
 		return False
-	
-	
-	
