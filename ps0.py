@@ -23,8 +23,9 @@ def num_digits(number):
 	returns the number of digits in it"""
 	incriment = 0
 	
-	for characters in str(number): 
-	#you have to convert to a string in order to count the amount of characters in the number
+	while number > 0:
+		number /= 10
+		#gets rid of the last digit
 		incriment += 1
 	
 	return incriment
@@ -38,9 +39,12 @@ def sum_digits(digits):
 	
 	sum = 0
 	
-	for digit in str(digits): 
-	#first convert the entire number to a string in order to isolate each single character, and then add them together
-		sum += int(digit)
+	while digits > 0:
+		finalNumber = digits % 10
+		digits -= finalNumber 
+		#this will get the last digit and then subtract it
+		sum += finalNumber
+		digits /= 10
 	
 	return sum
 
