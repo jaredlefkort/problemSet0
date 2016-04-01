@@ -9,7 +9,8 @@ def is_even(number):
 	returns True if the number is even
 	returns False if the number is odd. """
 	
-	if number % 2 == 0:
+	if number % 2 == 0: 
+	#if there is no remainder the function will return true
 		return True
 	else:
 		return False
@@ -22,7 +23,8 @@ def num_digits(number):
 	returns the number of digits in it"""
 	incriment = 0
 	
-	for characters in str(number):
+	for characters in str(number): 
+	#you have to convert to a string in order to count the amount of characters in the number
 		incriment += 1
 	
 	return incriment
@@ -36,7 +38,8 @@ def sum_digits(digits):
 	
 	sum = 0
 	
-	for digit in str(digits):
+	for digit in str(digits): 
+	#first convert the entire number to a string in order to isolate each single character, and then add them together
 		sum += int(digit)
 	
 	return sum
@@ -51,9 +54,10 @@ def sum_less_ints(number):
 	sum = 0
 		
 	while number > 0:
-		number -= 1
+		number -= 1 
+		#each time you go through the loop, the number will decrease by one, and then the new number will be added to the total
 		sum += number
-	
+ 
 	return sum
 
 #-------------------------------Function 4-----------------------------------
@@ -65,7 +69,8 @@ def factorial(number):
 	
 	product = 1
 	
-	while number > 0:
+	while number > 0: 
+	#each time you go through the loop, the product will be multiplied by the number, and then the number will be decreased, until the number reaches 0
 		product *= number
 		number -= 1
 	
@@ -79,6 +84,7 @@ def is_factor(number1, number2):
 	figures out whether the second number is a factor of the first."""
 	
 	if number1 % number2 == 0:
+	#if the remainder is 0, meaning that the second number is a factor of the first, the function will return true
 		return True
 	
 	else:
@@ -94,6 +100,9 @@ def is_prime(number):
 	divisor = 2
 	
 	while divisor < number:
+	#the divisor will increase until it reaches the number.  
+	#if the number is not prime, the loop will stop when it gets a remainder of 0
+	#else it will continue until it reaches the number at which point it will return true
 		if number % divisor == 0:
 			return False
 		divisor += 1
@@ -110,10 +119,13 @@ def is_perfect(number):
 	sum = 0
 	
 	for numbers in range(1, number):
+	#you need a range because you need to test the numbers less, to find the factors
 		if number % numbers == 0:
+		#when it finds that the number is a factor, it will add it to the total
 			sum += numbers
 	
 	if sum == number:
+	#at the end, if the sum equals the number then you know that it is a perfect number
 		return True
 	else:
 		return False
@@ -130,6 +142,7 @@ def sum_divisible(number):
 	Returns false if the sum of the digits of the number do not divide evenly into the number."""
 	
 	if number % sum_digits(number) == 0:
+	#this will test if the number divided by the sum of its digits has no remainder, meaning that it is a factor, and will return true if it is true
 		return True
 	else:
 		return False
