@@ -23,7 +23,7 @@ def num_digits(number):
 	returns the number of digits in it"""
 	incriment = 0
 	
-	while number > 0:
+	while number > 1:
 		number /= 10
 		#gets rid of the last digit
 		incriment += 1
